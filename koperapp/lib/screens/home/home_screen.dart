@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:syncfusion_flutter_calendar/calendar.dart';
+import 'package:koperapp/screens/home/login_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -8,12 +9,23 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text('lmao'),
-          elevation: 0,
-          leading: IconButton(
-            icon: SvgPicture.asset("assets\icons\more_lines.svg"),
-            onPressed: null,
-          )),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.switch_account),
+            onPressed: () {
+              LoginScreen();
+            },
+          ),
+        ],
+      ),
+      body: SafeArea(
+        child: SfCalendar(
+          view: CalendarView.workWeek,
+          firstDayOfWeek: 1,
+          timeSlotViewSettings: TimeSlotViewSettings(
+              nonWorkingDays: <int>[DateTime.sunday, DateTime.saturday]),
+        ),
+      ),
     );
   }
 }
