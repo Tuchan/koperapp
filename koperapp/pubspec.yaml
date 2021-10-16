@@ -40,6 +40,8 @@ dependencies:
   syncfusion_flutter_calendar: ^19.3.45
   sizer: ^2.0.15
   rename: ^1.3.1
+  map: ^1.0.0
+  cached_network_image: ^3.1.0
 
 dev_dependencies:
   flutter_test:

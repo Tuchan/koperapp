@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:koperapp/screens/home/home_screen.dart';
 import 'package:koperapp/screens/home/login_screen.dart';
+import 'package:koperapp/screens/home/register_screen.dart';
 
 void main(){
   runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Koper App',
       theme: ThemeData(primaryColor: Colors.blueGrey),
-      home: LoginScreen(),
+      home: RegisterScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
