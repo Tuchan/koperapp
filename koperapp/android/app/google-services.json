@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "866409087161",
+    "project_id": "koperapp-e690a",
+    "storage_bucket": "koperapp-e690a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866409087161:android:88fb679fd53aeab6409b68",
+        "android_client_info": {
+          "package_name": "com.example.koperapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "866409087161-itg60fdd1vigrdpmaig2qqbi1hdb8o6q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.koperapp",
+            "certificate_hash": "c6bb189907c88d7fc8533943473f1c78347aa75e"
+          }
+        },
+        {
+          "client_id": "866409087161-dtn6263sdo0ob118r7l5naistq4jmsg9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBurNvZ5uK536hqVD5Xc3o3jIG0fnZZ_WA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "866409087161-dtn6263sdo0ob118r7l5naistq4jmsg9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

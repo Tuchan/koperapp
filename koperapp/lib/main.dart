@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:koperapp/screens/home/home_screen.dart';
 import 'package:koperapp/screens/home/login_screen.dart';
 
-void main() {
+void main(){
   runApp(MyApp());
 }
 
