@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:koperapp/backend/auth.dart';
 import 'package:koperapp/screens/home/home_screen.dart';
+import 'package:koperapp/screens/home/error_message.dart';
+import 'package:koperapp/screens/home/purgatory.dart';
 
 // bool passwordVisible = false;
 
@@ -17,7 +20,9 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   String _klasa = "Klasa";
+  late String _email, _pass, _login;
   final _formKey = GlobalKey<FormState>();
+  FAuth auth = FAuth();
   // void showpw() {
   //   setState(() {
   //     passwordVisible = !passwordVisible;
@@ -64,6 +69,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     children: [
                       Flexible(
                         child: TextFormField(
+                          onChanged: (value){
+                            setState(() {
+                              _login = value.trim();
+                            });
+                          },
                           enableSuggestions: false,
                           autocorrect: false,
                           decoration: const InputDecoration(
@@ -121,6 +131,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: TextFormField(
+                    onChanged: (value){
+                      this._pass = value.trim();
+                    },
                     obscureText: true,
                     enableSuggestions: false,
                     autocorrect: false,
@@ -168,7 +181,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: TextFormField(
-                    obscureText: true,
+                    onChanged: (value){
+                      this._email = value.trim();
+                    },
+                    obscureText: false,
                     enableSuggestions: false,
                     autocorrect: false,
                     decoration: const InputDecoration(
@@ -194,12 +210,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: ElevatedButton(
-                    onPressed: () {
-                      if (_formKey.currentState!.validate()) {
-                        SnackBar(
-                          content: Text('niby sie wysyła'),
-                        );
-                      }
+                    onPressed: () async{
+                      await this.auth.register(_login, _email, _pass).then((_) async{
+                        await this.auth.verifyEmail();
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Purgatory()));
+                      }).catchError((err){
+                        errorMessage(context, err);
+                      });
                     },
                     child: Text("Zarejestruj się"),
                     style: ElevatedButton.styleFrom(

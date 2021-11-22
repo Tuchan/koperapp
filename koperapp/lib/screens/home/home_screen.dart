@@ -1,18 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 import 'package:koperapp/screens/home/login_screen.dart';
+import 'package:koperapp/backend/auth.dart';
 
-class HomeScreen extends StatelessWidget {
+
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  FAuth auth = FAuth();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text("zalogowano jako ${auth.user?.email}"), // do usunięcia (potrzebne tylko do testów)
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.switch_account),
             onPressed: () {
+              auth.logOut();
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => LoginScreen()),
@@ -33,6 +44,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
 
 List<Meeting> _getDataSource() {
   final List<Meeting> meetings = <Meeting>[];
@@ -75,6 +87,7 @@ class MeetingDataSource extends CalendarDataSource {
     return appointments![index].isAllDay;
   }
 }
+
 
 class Meeting {
   Meeting(this.eventName, this.from, this.to, this.background, this.isAllDay);
