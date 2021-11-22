@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6a2f4d89-07d8-45a2-bf5a-fc5b3ac5e221" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/koperapp/lib/backend/auth.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/koperapp/lib/screens/home/error_message.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/koperapp/lib/screens/home/purgatory.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koperapp/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/koperapp/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koperapp/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/koperapp/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koperapp/lib/backend/login.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/koperapp/lib/backend/register.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/koperapp/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/koperapp/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koperapp/lib/screens/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/koperapp/lib/screens/home/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koperapp/lib/screens/home/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/koperapp/lib/screens/home/login_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koperapp/lib/screens/home/register_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/koperapp/lib/screens/home/register_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koperapp/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/koperapp/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koperapp/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/koperapp/pubspec.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/adamd/.android/avd/Pixel_2_API_30.avd]" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1zPsnBIfmpJETOYN7ys47nG8m7R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/koperapp/android/app" />
+    <property name="settings.editor.selected.configurable" value="emulator" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/koperapp/android/app" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/koperapp/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Flutter.main.dart" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a2f4d89-07d8-45a2-bf5a-fc5b3ac5e221" name="Default Changelist" comment="" />
+      <created>1634061223510</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634061223510</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
