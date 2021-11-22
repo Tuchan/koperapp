@@ -1,8 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:koperapp/screens/home/error_message.dart';
+import 'package:koperapp/screens/home/register_screen.dart';
 import 'package:koperapp/screens/home/home_screen.dart';
+import 'package:koperapp/screens/home/purgatory.dart';
+import 'package:koperapp/backend/auth.dart';
 
-class LoginScreen extends StatelessWidget {
+
+class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
+
+  @override
+  _LoginScreenState createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  late String _email, _pass;
+  FAuth auth = FAuth();
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +54,11 @@ class LoginScreen extends StatelessWidget {
                   autocorrect: false,
                   decoration: const InputDecoration(
                       border: OutlineInputBorder(), labelText: "Login"),
+                  onChanged: (value){
+                    setState(() {
+                      _email = value.trim();
+                    });
+                  },
                 ),
               ),
               Padding(
@@ -51,12 +69,30 @@ class LoginScreen extends StatelessWidget {
                   autocorrect: false,
                   decoration: const InputDecoration(
                       border: OutlineInputBorder(), labelText: "Hasło"),
+                  onChanged: (value){
+                    setState(() {
+                      _pass = value.trim();
+                    });
+                  },
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () async{
+                    await auth.logIn(_email, _pass).then((_) async{
+                      if (auth.verifiedEmail) {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => HomeScreen()));
+                      }else{
+                        await auth.verifyEmail();
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => Purgatory()));
+                      }
+                    }).catchError((err){
+                      errorMessage(context, err);
+                    });
+                  },
                   child: Text("Zaloguj się"),
                   style: ElevatedButton.styleFrom(
                       primary: Colors.blueGrey,
@@ -67,7 +103,9 @@ class LoginScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => RegisterScreen()));
+                  },
                   child: Text(
                     "Zarejestruj się",
                     style: TextStyle(color: Colors.blueGrey),

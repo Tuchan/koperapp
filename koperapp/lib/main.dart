@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:koperapp/screens/home/home_screen.dart';
 import 'package:koperapp/screens/home/login_screen.dart';
-import 'package:koperapp/screens/home/register_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main(){
+void main() async{
+  // init firebase
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   runApp(MyApp());
 }
 
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Koper App',
       theme: ThemeData(primaryColor: Colors.blueGrey),
-      home: RegisterScreen(),
+      home: LoginScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
